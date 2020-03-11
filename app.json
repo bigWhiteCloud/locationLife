@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/my/my",
+    "pages/newpage/newpage",
+    "pages/list/list"
+  ],
+ "window": {
+   "navigationBarBackgroundColor": "#6f7f96",
+   "navigationBarTextStyle": "white",
+   "navigationBarTitleText": "本地生活",
+   "backgroundColor": "#eeeeee",
+   "backgroundTextStyle": "light",
+   "enablePullDownRefresh": true
+ },
+ "tabBar": {
+   "color": "#999",
+   "selectedColor": "#333",
+   "backgroundColor": "#ffffff",
+   "borderStyle": "black",
+   "list": [
+     {
+     "pagePath": "pages/index/index",
+     "text": "主页",
+     "iconPath": "/img/tabs/home.png",
+     "selectedIconPath": "/img/tabs/home-active.png"
+    },
+    {
+      "pagePath": "pages/news/news",
+      "text": "消息",
+      "iconPath": "/img/tabs/message.png",
+      "selectedIconPath": "/img/tabs/message-active.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "/img/tabs/profile.png",
+      "selectedIconPath": "/img/tabs/profile-active.png"
+    }
+   ]
+ },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

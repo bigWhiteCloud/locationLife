@@ -1,0 +1,32 @@
+<!--pages/list/list.wxml-->
+<view>
+  <swiper class="banner">
+    <swiper-item  wx:for="{{ list.images }}" wx:key="key" data-imglist="{{ list.images }}">
+      <image src="{{ item }}" mode="aspectFill" bindtap="fatImg" data-imglist="{{ list.images }}" data-srcImg="{{ item }}"></image>
+    </swiper-item>
+    <!-- <swiper-item>
+      <image src="/img/images/banner-02.png" mode="aspectFill"></image>
+    </swiper-item> -->
+  </swiper>
+  <view class="news">
+    <text class="title">{{ list.name }}</text>
+    <text>电话:{{ list.phone }}</text>
+    <text>地址:{{ list.address }}</text>
+  </view>
+  <view class="details" wx:for="{{ list.comments }}" wx:key="key">
+    <text>{{ item.name }}</text>
+    <text>{{ item.content }}</text>
+    <view class="imgShow">
+      <image  wx:for="{{ item.images }}" wx:key="key" src="{{ util.srcsize(item) }}"></image>
+    </view>
+
+
+  </view>
+</view>
+<wxs module="util">
+  module.exports = {
+    srcsize:function(url){
+      return url.replace("w.h","100.100");
+    }
+  }        
+</wxs>

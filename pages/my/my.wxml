@@ -1,0 +1,9 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+  <view class="header">
+    <text class="title">免费送票</text>
+    <image src=""></image>
+    <text></text>
+    <text>阅读全部</text>
+  </view>
+</view>

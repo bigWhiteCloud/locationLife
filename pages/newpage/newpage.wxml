@@ -1,0 +1,18 @@
+<!--pages/newpage/newpage.wxml-->
+<view class="search">
+  <input placeholder="搜索"></input>
+  <icon type="search" size="15"></icon>
+</view>
+<view class="nav">
+  <navigator class="items" wx:for="{{ list }}" wx:key="key" url="/pages/list/list?id={{item.id}}">
+    <image src="{{ item.images[0] }}"></image>
+    <view >
+      <text>标题:{{ item.name }}</text>
+      <text>电话:{{ item.phone }}</text>
+      <text>地址:{{ item.address }}</text>
+      <text>营业时间:{{ item.businessHours }}</text>
+    </view>
+  </navigator>
+</view>
+<view class="foot" loading wx:if="{{ hasMore }}">正在加载...</view>
+<view class="foot" loading wx:else>已经到底了！！！</view>
